@@ -51,13 +51,11 @@ function KeeperTableHead() {
 
 const KeeperTableToolbar = (props) => {
   const classes = useToolbarStyles();
-  const dispatch = useAppDispatch();
   const [value, setValue] = useState(KEEPER_HISTORY_DATE_FILTER.LAST_DAY);
 
   const { onChangeFilter } = props;
 
   const handleFilterPeriod = (event) => {
-    console.log('targetValue is:', event.target.value);
     const newValue = event.target.value;
     setValue(newValue);
     onChangeFilter(newValue);
@@ -103,7 +101,7 @@ export default function KeeperTable() {
 
   useEffect(() => {
     dispatch(fetchKeeperState(currentDateRange));
-  }, [currentDateRange]);
+  }, [currentDateRange, dispatch]);
 
   return (
     <div className={classes.root}>

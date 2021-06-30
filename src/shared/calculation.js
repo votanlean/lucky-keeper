@@ -1,4 +1,3 @@
-import { isEmpty } from "lodash";
 import { BIG_ZERO } from "./constants";
 import { getTotalGasFeeForTransactions } from './blockchain';
 

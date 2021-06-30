@@ -3,7 +3,6 @@ import BN from 'bn.js';
 
 import { blockchainEventActions } from '.';
 import dayjs from 'dayjs';
-import { convertDateRangeInStringToTimestamp } from '../../shared/timestamp';
 import { BIG_TEN, CURRENT_BLOCK, KEEPER_HISTORY_DATE_FILTER } from '../../shared/constants';
 
 function generateMockBlockchainData() {
